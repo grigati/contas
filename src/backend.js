@@ -5,7 +5,7 @@
  * - responsavel (quem pagou a conta)
  * - valor
  * - data de vencimento
- * - ciclo de repeticao (mensal, semestral ou anual)
+ * - ciclo de repeticao (em meses)
  * - número de repetições
  */
 export function cadastrarContaAPagar(conta) {
@@ -21,7 +21,8 @@ export function pagarConta() { }
 // Busca lista de próximas contas a pagar
 export function buscarContasAPagar() {
     return [
-        {
+        {   
+            id: 1,
             cicloRepeticao: 1,
             dataVencimento: "2019-06-28",
             descricao: "Aluguel",
@@ -30,6 +31,7 @@ export function buscarContasAPagar() {
             valor: 2000
         },
         {
+            id: 2,
             cicloRepeticao: 6,
             dataVencimento: "2019-07-10",
             descricao: "Serviços de Manutenção",
@@ -38,6 +40,7 @@ export function buscarContasAPagar() {
             valor: 150.28
         },
         {
+            id: 3,
             cicloRepeticao: 1,
             dataVencimento: "2019-07-15",
             descricao: "Telefone",
