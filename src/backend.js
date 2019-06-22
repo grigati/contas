@@ -17,3 +17,33 @@ export function cadastrarContaAPagar(conta) {
  * e o número de repetições deve ser decrementado em um
  */
 export function pagarConta() { }
+
+// Busca lista de próximas contas a pagar
+export function buscarContasAPagar() {
+    return [
+        {
+            cicloRepeticao: 1,
+            dataVencimento: "2019-06-28",
+            descricao: "Aluguel",
+            numRepeticoes: 24,
+            responsavel: "Otávio Sales",
+            valor: 2000
+        },
+        {
+            cicloRepeticao: 6,
+            dataVencimento: "2019-07-10",
+            descricao: "Serviços de Manutenção",
+            numRepeticoes: 4,
+            responsavel: "Antônia Gomes",
+            valor: 150.28
+        },
+        {
+            cicloRepeticao: 1,
+            dataVencimento: "2019-07-15",
+            descricao: "Telefone",
+            numRepeticoes: 12,
+            responsavel: "Emily Santos",
+            valor: 250
+        }
+    ];
+}
