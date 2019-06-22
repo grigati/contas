@@ -69,9 +69,9 @@ class FormularioCadastroConta extends React.Component {
                         rules: [{ required: true, message: 'Campo obrigatório' }],
                     })(
                     <Select initialValue="1">
-                        <Option value="1">Mensal</Option>
-                        <Option value="6">Semestral</Option>
-                        <Option value="12">Anual</Option>
+                        <Option value={1}>Mensal</Option>
+                        <Option value={6}>Semestral</Option>
+                        <Option value={12}>Anual</Option>
                     </Select>
                     )}
                 </Form.Item>
