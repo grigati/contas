@@ -1,5 +1,6 @@
 import React from 'react';
 import { Input, Form, Button, InputNumber, DatePicker, Select } from 'antd';
+import { cadastrarContaAPagar } from './backend';
 import 'antd/dist/antd.css';
 
 const { TextArea } = Input;
@@ -11,9 +12,8 @@ class FormularioCadastroConta extends React.Component {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
         if (!err) {
-            console.log('Valores recebidos: ', values);
-
             // Envia para o backend
+            cadastrarContaAPagar(values);
         }
         });
     };
