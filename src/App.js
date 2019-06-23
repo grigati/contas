@@ -29,15 +29,7 @@ class App extends React.Component {
 
     return (
       <div>
-        {/* Botão para abrir modal de cadastrar compras */}
-        <div style={{ display: "flex" }}>
-          <Button type="primary" style={{ margin: "20px auto" }} onClick={this.abrirModal}>
-            Cadastrar Conta a Pagar
-          </Button>
-        </div>
-
-        <ListaContasAPagar />
-
+        {/* Cadastro de contas */}
         <Modal
           title="Cadastrar Conta a Pagar"
           style={{ top: "1em" }}
@@ -47,6 +39,15 @@ class App extends React.Component {
         >
           <CadastroConta />
         </Modal>
+
+        {/* Botão para abrir modal de cadastrar compras */}
+        <div style={{ display: "flex" }}>
+          <Button type="primary" style={{ margin: "20px auto" }} onClick={this.abrirModal}>
+            Cadastrar Conta a Pagar
+          </Button>
+        </div>
+
+        <ListaContasAPagar />
       </div>
     );
   }
