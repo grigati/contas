@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input, Form, Button, InputNumber, DatePicker, Select } from 'antd';
+import { Input, Form, Button, InputNumber, DatePicker, Select, notification } from 'antd';
 import { cadastrarContaAPagar } from './backend';
 import 'antd/dist/antd.css';
 
@@ -14,6 +14,11 @@ class FormularioCadastroConta extends React.Component {
         if (!err) {
             // Envia para o backend
             cadastrarContaAPagar(values);
+
+            // Abre uma notificação com o resultado do cadastro
+            notification.open({
+                message: 'Cadastro efetuado com sucesso'
+            });
         }
         });
     };
