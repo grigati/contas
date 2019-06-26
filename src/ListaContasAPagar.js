@@ -1,6 +1,6 @@
 import React from 'react';
 import { Table } from 'antd';
-import { buscarContasAPagar } from './backend';
+import { ordenarContasAPagar } from './backend';
 
 const { Column } = Table;
 
@@ -14,7 +14,7 @@ class ListaContasAPagar extends React.Component {
 
     componentDidMount() {
         // Busca lista de contas a pagar do backend
-        const contas = buscarContasAPagar();
+        const contas = ordenarContasAPagar();
         this.setState({ contas: contas });
     }
 
@@ -61,7 +61,6 @@ class ListaContasAPagar extends React.Component {
                             }
                         </span>
                     )} /> />
-                <Column title="Número de Repetições" dataIndex="numRepeticoes" key="numRepeticoes" />
             </Table>
         );
     } 
